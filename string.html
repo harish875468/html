@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>string operation</title>
+</head>
+<body>
+<h1>string reversal and substring position to find</h1>
+<label for="inputString">enter a string</label></br>
+<input type="text" id="Substring" value="helloworld"><br><br>
+<label for="subString">enter subString find</label><br>
+<input type="sub" id="subString" value="world"><br><br>
+<button onclick="perform()">perform</button><br><br>
+<p>reversed string:<span id="revesedOutput"></span><p>
+<p>substring position:<span id="positionOutput"></span><p>
+<script>
+function reverseString(str)
+{
+return str.split(' ').reverse( ).join(' ');
+}
+function findSub(mainString,subString)
+{
+return mainString.indexOf(subString);
+}
+function perform()
+{
+const inputStr=document.getEementById('inputString').value;
+const subStr=document.getElementById('subString').value;
+const reversed=reverseString(inputStr);
+const position=findSub(inputStr,subStr);
+document.getElementById('reversedOutput').textContent=reversed;
+document.getElementById('positionOutput').textContent=position ==-1?position:"Notfound";
+}
+</script>
+</body>
+</html>
+
+

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullstack Developer | Portfolio</title>
+    <style>
+        /* [Previous Styles Maintained] */
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: #8e44ad; color: #333; scroll-behavior: smooth; }
+        nav { background: rgba(0, 0, 0, 0.3); padding: 1rem 2rem; display: flex; justify-content: space-between; position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(10px); }
+        nav a { color: white; text-decoration: none; margin-left: 20px; }
+
+        .section-title { text-align: center; color: white; margin: 60px 0 30px; font-size: 2rem; }
+
+        /* Hero & Project Grid Styles */
+        .hero-container { display: flex; max-width: 1100px; margin: 40px auto; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+        .text-section { flex: 1.2; padding: 40px; }
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .project-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .project-info { padding: 20px; }
+
+        /* NEW: Contact Layout */
+        .contact-wrapper {
+            display: flex;
+            max-width: 1100px;
+            margin: 60px auto;
+            gap: 40px;
+            padding: 0 20px;
+        }
+
+        .contact-info-card {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            padding: 40px;
+            border-radius: 20px;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .contact-form-container {
+            flex: 1.5;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .info-item { margin-bottom: 25px; }
+        .info-item h4 { margin: 0 0 5px 0; color: #f1f2f6; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+        .info-item p { margin: 0; font-size: 1.1rem; font-weight: 500; }
+
+        input, textarea, .submit-btn { width: 100%; padding: 12px; margin-top: 10px; border-radius: 8px; border: 1px solid #ddd; font-family: inherit; box-sizing: border-box; }
+        .submit-btn { background: #8e44ad; color: white; border: none; cursor: pointer; font-weight: bold; margin-top: 20px; }
+
+        @media (max-width: 850px) {
+            .hero-container, .contact-wrapper { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div style="color: white; font-weight: bold;">DevPortfolio</div>
+        <div>
+            <a href="#">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <div class="hero-container">
+        <div style="flex:1; background: #eee;">
+            
+            <img src="WhatsApp Image 2026-03-20 at 12.16.17 PM.jpeg" alt="Profile" style="width:100%; height:100%; object-fit:cover; display:block;">
+        </div>
+        <div class="text-section">
+            <span style="background:#8e44ad; color:white; padding:5px 12px; border-radius:20px; font-size:0.8rem;">Fullstack Developer</span>
+            <h1>R. Harish Narayanan</h1>
+            <p>I build scalable web applications and interactive digital experiences. Currently a student and aspiring software engineer.</p>
+        </div>
+    </div>
+
+    <h2 id="projects" class="section-title">Technical Projects</h2>
+    <div class="project-grid">
+        <div class="project-card">
+            <div class="project-info">
+                <h3>Food Delivery App</h3>
+                <p>Logic for stock management and UI for order tracking.</p>
+                <img src="OIP.jpeg">
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-info">
+                <h3>Guess the Cricketer</h3>
+                <img src="OIP (1).jpeg">
+                <p>A JavaScript-based game with real-time scoring.</p>
+            </div>
+        </div>
+    </div>
+
+    <h2 id="contact" class="section-title">Get In Touch</h2>
+    <div class="contact-wrapper">
+        
+        <div class="contact-info-card">
+            <div class="info-item">
+                <h4>Email</h4>
+                <p>harish.dev@example.com</p>
+            </div>
+            <div class="info-item">
+                <h4>Location</h4>
+                <p>Chennai, India</p>
+            </div>
+            <div class="info-item">
+                <h4>LinkedIn</h4>
+                <p>linkedin.com/in/harish-narayanan</p>
+            </div>
+            <div class="info-item">
+                <h4>Education</h4>
+                <p>Full Stack Web Development Student</p>
+            </div>
+        </div>
+
+        <div class="contact-form-container">
+            <form action="#" onsubmit="alert('Sent!'); return false;">
+                <label>Name</label>
+                <input type="text" placeholder="Your Name" required>
+                <label>Message</label>
+                <textarea placeholder="How can I help you?"></textarea>
+                <button type="submit" class="submit-btn">Send Email</button>
+            </form>
+        </div>
+    </div>
+    <style>
+        /* General Styles */
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: #8e44ad; color: #333; scroll-behavior: smooth; }
+        nav { background: rgba(0, 0, 0, 0.3); padding: 1rem 2rem; display: flex; justify-content: space-between; position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(10px); }
+        nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; }
+
+        .section-title { text-align: center; color: white; margin: 60px 0 30px; font-size: 2.2rem; }
+
+        /* Education Layout */
+        .education-container {
+            max-width: 900px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+        }
+
+        .edu-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            border-left: 8px solid #2d3436; /* Dark accent for academic feel */
+            transition: transform 0.3s ease;
+        }
+
+        .edu-card:hover { transform: scale(1.02); }
+
+        .edu-icon {
+            font-size: 2.5rem;
+            background: #f1f2f6;
+            padding: 15px;
+            border-radius: 12px;
+        }
+
+        .edu-details h3 { margin: 0; color: #8e44ad; font-size: 1.4rem; }
+        .edu-details h4 { margin: 5px 0; color: #2d3436; font-weight: 600; }
+        .edu-details .date { color: #636e72; font-size: 0.9rem; margin-bottom: 15px; display: block; }
+        
+        .course-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .course-tag {
+            background: #eee;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: #2d3436;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            .edu-card { flex-direction: column; text-align: center; }
+            .edu-icon { align-self: center; }
+        }
+    </style>
+</head>
+<body>
+        
+
+    <h2 id="education" class="section-title">Academic Background</h2>
+    
+    <div class="education-container">
+        
+        <div class="edu-card">
+            <div class="edu-icon">
+            <div class="edu-details">
+                <img src="OIP.webp">
+                <h3>Full Stack Web Development</h3>
+                <h4>Current Studies</h4>
+                
+                <span class="date">Present | madurai,india</span>
+                <p>Focusing on building end-to-end applications using modern frameworks and database management systems.</p>
+                <div class="course-list">
+                    <span class="course-tag">HTML5 & CSS & python</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="edu-card">
+            <div class="edu-icon">
+            <div class="edu-details">
+
+                <h3>Secondary Education</h3>
+                <img src="mnu-jayaraj-nadar-higher-secondary-school-nagamalai-pudhukottai-madurai-schools-19btaiv-250.avif">
+                <h4>School Profile</h4>
+                <span class="date">Completed 2024</span>
+                <p>Strong foundation in mathematics and computer science fundamentals.</p>
+            </div>
+        </div>
+
+    </div>
+
+    </body>
+</html>
+
+</body>
+</html>
